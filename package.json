@@ -1,0 +1,14 @@
+{
+  "name": "word-to-emoji",
+  "version": "0.0.0",
+  "description": "I love emojis",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "emoji"
+  ],
+  "author": "fkropfhamer",
+  "license": "MIT"
+}
