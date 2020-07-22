@@ -1,6 +1,6 @@
 {
   "name": "word-to-emoji",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "I love emojis",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
