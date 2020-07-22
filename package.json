@@ -2,9 +2,12 @@
   "name": "word-to-emoji",
   "version": "0.0.1",
   "description": "I love emojis",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "webpack --mode=production",
+    "prepublish": "build"
   },
   "repository": {
     "type": "git",
@@ -14,5 +17,14 @@
     "emoji"
   ],
   "author": "fkropfhamer",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "ts-loader": "^8.0.1",
+    "typescript": "^3.9.7",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  }
 }
