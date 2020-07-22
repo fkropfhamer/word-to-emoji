@@ -1,2 +1,4 @@
 src/
 .DS_Store
+tsconfig.json
+webpack.config.js
