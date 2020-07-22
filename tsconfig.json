@@ -9,6 +9,5 @@
         "esModuleInterop": true,
         "baseUrl": "./",
         "declaration": true,
-        "resolveJsonModule": true
     }
 }

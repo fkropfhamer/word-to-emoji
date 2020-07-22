@@ -1,4 +1,4 @@
-import all_emojis from './all_emojis.json';
+import all_emojis from './all_emojis';
 
 
 function wordToEmoji() {
