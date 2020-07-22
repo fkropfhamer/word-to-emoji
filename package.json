@@ -7,7 +7,7 @@
   "scripts": {
     "test": "jest",
     "build": "webpack --mode=production",
-    "prepublish": "build"
+    "prepublish": "webpack --mode=prduction"
   },
   "repository": {
     "type": "git",
