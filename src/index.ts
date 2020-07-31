@@ -1,4 +1,5 @@
 import all_emojis from './all_emojis';
+import { wordToEmoji as wTE } from './wordToEmoji';
 
 
 export default () => {
@@ -9,13 +10,7 @@ export function getRandomEmoji() {
     return all_emojis[Math.floor(Math.random() * all_emojis.length)].symbol;
 }
 
-export function wordToEmoji(word: string) {
-    const emoji = all_emojis.find((element) => {
-        return element.translations.English === word || element.translations.Deutsch === word || element.translations.Español === word || element.translations.Français === word || element.translations.Italiano === word || element.translations.Polski === word || element.translations.Português === word || element.translations.Русский === word
-    });
-
-    return emoji.symbol;
-}
+export const wordToEmoji = wTE;
 
 export function emojify(text: string) {
     let emojifiedText = text;
@@ -25,7 +20,3 @@ export function emojify(text: string) {
 
     return emojifiedText;
 }
-
-
-  
-
