@@ -2,11 +2,11 @@ const path = require('path');
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-    entry: './src/index.ts',
+    entry: './src/index.js',
     module: {
         rules: [
             {
-                test: /\.ts(x?)$/,
+                test: /\.js(x?)$/,
                 exclude: /node_modules/,
                 use: [
                     {
@@ -14,9 +14,6 @@ module.exports = {
                         options: {     
                      //       presets: ["@babel/preset-env"],
                         },
-                    },
-                    {
-                        loader: "ts-loader",
                     },
                 ],
             },

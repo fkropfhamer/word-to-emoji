@@ -9,15 +9,24 @@ export function getRandomEmoji() {
     return all_emojis[Math.floor(Math.random() * all_emojis.length)].symbol;
 }
 
-export function wordToEmoji(word: string) {
+export function wordToEmoji(word, languages = ['English', 'Deutsch', 'Español', 'Français', 'Italiano', 'Polski', 'Português', 'Русский']) {
+    const normalizedWord = word.toLowerCase();
+
     const emoji = all_emojis.find((element) => {
-        return element.translations.English === word || element.translations.Deutsch === word || element.translations.Español === word || element.translations.Français === word || element.translations.Italiano === word || element.translations.Polski === word || element.translations.Português === word || element.translations.Русский === word
+        let found = false
+        languages.forEach((language) => {
+            if (element.translations[language].toLowerCase() === normalizedWord) {
+                found = found || true;
+            }
+        });
+
+        return found;
     });
 
     return emoji.symbol;
 }
 
-export function emojify(text: string) {
+export function emojify(text) {
     let emojifiedText = text;
     all_emojis.forEach((emoji) => {
         emojifiedText = emojifiedText.replace(new RegExp(emoji.name, "gi"), emoji.symbol);
