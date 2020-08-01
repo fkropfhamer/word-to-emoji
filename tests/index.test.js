@@ -19,7 +19,7 @@ describe('word-to-emoji', () => {
         expect(wordToEmoji('Sparkling Heart')).toBe('💖');
     });
 
-    it('returns right emoji for word', () => {
+    it('replace all recognized words with emojis right', () => {
         expect(emojify('Sparkling Heart emojis sparkling heart')).toBe('💖 emojis 💖');
     });
 });
